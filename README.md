@@ -14,9 +14,7 @@ Summary: The easiest way to automate JIRA
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/jira-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/jira-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/jira-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/jira-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/jira-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/jira-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/jira-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/jira-feedstock)
 
 Current release info
 ====================
