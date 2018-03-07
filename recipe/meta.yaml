@@ -1,7 +1,7 @@
 {%set name = "jira" %}
-{%set version = "1.0.10" %}
+{%set version = "1.0.14" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "409a0a94800f05a1e8e078540eb5610e243586bd5ee9bc8cae8899cbbd061898" %}
+{%set hash_val = "a35e270c37c7f43f12bb67e4cad226e81f6bf926acfc35d4b60fc88715cbccf6" %}
 
 package:
   name: {{ name }}
@@ -13,11 +13,12 @@ source:
   {{ hash_type }}: {{ hash_val }}
 
 build:
+  noarch: python
   entry_points:
     - jirashell = jira.jirashell:main
 
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
@@ -25,6 +26,7 @@ requirements:
     - pbr >=1.9
     - setuptools >=17.1
     - pytest-runner
+    - pip
 
   run:
     - python
