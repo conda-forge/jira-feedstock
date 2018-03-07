@@ -23,6 +23,9 @@ build:
 requirements:
   build:
     - python
+    - pbr >=1.9
+    - setuptools >=17.1
+    - pytest-runner
     - pip
 
   run:
