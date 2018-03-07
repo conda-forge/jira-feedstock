@@ -17,14 +17,12 @@ build:
     - jirashell = jira.jirashell:main
 
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
   build:
     - python
-    - pbr >=1.9
-    - setuptools >=17.1
-    - pytest-runner
+    - pip
 
   run:
     - python
