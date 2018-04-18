@@ -1,7 +1,7 @@
 {%set name = "jira" %}
-{%set version = "1.0.14" %}
+{%set version = "1.0.15" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "a35e270c37c7f43f12bb67e4cad226e81f6bf926acfc35d4b60fc88715cbccf6" %}
+{%set hash_val = "20108a1d5b0dd058d5d4e0047f2d09ee06aaa413b22ca4d5c249e86167417fe8" %}
 
 package:
   name: {{ name }}
