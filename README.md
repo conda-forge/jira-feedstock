@@ -14,15 +14,14 @@ Summary: The easiest way to automate JIRA
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/jira-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/jira-feedstock)
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/jira-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/jira-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/jira-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/jira-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/jira-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/jira-feedstock/branch/master)
 
 Current release info
 ====================
-[![Conda Recipe](https://img.shields.io/badge/recipe-jira-green.svg)](https://anaconda.org/conda-forge/jira)
-[![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jira.svg)](https://anaconda.org/conda-forge/jira)
-[![Conda Version](https://img.shields.io/conda/vn/conda-forge/jira.svg)](https://anaconda.org/conda-forge/jira)
-[![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jira.svg)](https://anaconda.org/conda-forge/jira)
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/jira/badges/version.svg)](https://anaconda.org/conda-forge/jira)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/jira/badges/downloads.svg)](https://anaconda.org/conda-forge/jira)
 
 Installing jira
 ===============
