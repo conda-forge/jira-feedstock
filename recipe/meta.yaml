@@ -14,9 +14,9 @@ source:
   {{ hash_type }}: {{ hash_val }}
 
 build:
+  noarch: python
   entry_points:
     - jirashell = jira.jirashell:main
-
   number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
@@ -31,9 +31,7 @@ requirements:
 
   run:
     - python
-    - argparse  # [py2k]
     - defusedxml
-    - ordereddict  # [py2k]
     - pbr >=3.0.0
     - requests-oauthlib >=0.6.1
     - requests >=2.10.0
