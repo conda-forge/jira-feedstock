@@ -1,19 +1,19 @@
-{%set name = "jira" %}
-{%set version = "1.0.15" %}
-{%set hash_type = "sha256" %}
-{%set hash_val = "20108a1d5b0dd058d5d4e0047f2d09ee06aaa413b22ca4d5c249e86167417fe8" %}
+{% set name = "jira" %}
+{% set version = "1.0.15" %}
+{% set bundle = "tar.gz" %}
+{% set hash_type = "sha256" %}
+{% set hash_val = "20108a1d5b0dd058d5d4e0047f2d09ee06aaa413b22ca4d5c249e86167417fe8" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  fn: {{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
   {{ hash_type }}: {{ hash_val }}
 
 build:
-  noarch: python
   entry_points:
     - jirashell = jira.jirashell:main
 
@@ -23,30 +23,35 @@ build:
 requirements:
   build:
     - python
-    - pbr >=1.9
+    - pip
+    - pbr >=3.0
     - setuptools >=17.1
     - pytest-runner
-    - pip
+    - sphinx >=1.6.5
 
   run:
     - python
-    - pbr >=1.9
+    - argparse  # [py2k]
+    - defusedxml
+    - ordereddict  # [py2k]
+    - pbr >=3.0.0
     - requests-oauthlib >=0.6.1
     - requests >=2.10.0
     - requests-toolbelt
-    - six >=1.10.0
     - setuptools >=20.10.1
-    - defusedxml
+    - six >=1.10.0
 
 test:
   imports:
-    - {{ name }}
+    - jira
 
 about:
   home: https://github.com/pycontribs/jira
   license: BSD 2-Clause
   license_file: LICENSE
   summary: 'The easiest way to automate JIRA'
+  dev_url: https://github.com/pycontribs/jira
+  doc_url: https://jira.readthedocs.io/en/latest/
 
 extra:
   recipe-maintainers:
