@@ -1,8 +1,7 @@
 {% set name = "jira" %}
-{% set version = "2.0.0" %}
+{% set version = "3.0.1" %}
 {% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash_val = "e2a94adff98e45b29ded030adc76103eab34fa7d4d57303f211f572bedba0e93" %}
+{% set hash_val = "5bd8f4199632bf91fcfb4ba25ad2226991d403923b75f7cd2b051b4571492831" %}
 
 package:
   name: {{ name }}
@@ -11,17 +10,17 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash_val }}
+  sha256: {{ hash_val }}
 
 build:
   noarch: python
   entry_points:
     - jirashell = jira.jirashell:main
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
+  host:
     - python
     - pip
     - pbr >=3.0
@@ -47,7 +46,7 @@ about:
   home: https://github.com/pycontribs/jira
   license: BSD 2-Clause
   license_file: LICENSE
-  summary: 'The easiest way to automate JIRA'
+  summary: The easiest way to automate JIRA
   dev_url: https://github.com/pycontribs/jira
   doc_url: https://jira.readthedocs.io/en/latest/
 
