@@ -40,7 +40,6 @@ test:
     - jira
   commands:
     - pip check
-    - jirashell --version
     - jirashell --help
 
 about:
