@@ -34,8 +34,14 @@ requirements:
     - setuptools >=20.10.1
 
 test:
+  requires:
+    - pip
   imports:
     - jira
+  commands:
+    - pip check
+    - jirashell --version
+    - jirashell --help
 
 about:
   home: https://github.com/pycontribs/jira
