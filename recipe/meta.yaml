@@ -21,7 +21,7 @@ requirements:
     - python >=3.6
     - setuptools >=41.0.0
     - setuptools-scm >=1.15.0
-    - setuptools-scm-git_archive >=1.0
+    - setuptools_scm_git_archive >=1.0
     - wheel
 
   run:
