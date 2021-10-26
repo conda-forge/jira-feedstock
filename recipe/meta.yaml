@@ -1,58 +1,61 @@
-{% set name = "jira" %}
-{% set version = "2.0.0" %}
-{% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash_val = "e2a94adff98e45b29ded030adc76103eab34fa7d4d57303f211f572bedba0e93" %}
+{% set version = "3.0.1" %}
 
 package:
-  name: {{ name }}
+  name: jira
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash_val }}
+  url: https://pypi.org/packages/source/j/jira/jira-{{ version }}.tar.gz
+  sha256: 5bd8f4199632bf91fcfb4ba25ad2226991d403923b75f7cd2b051b4571492831
 
 build:
   noarch: python
   entry_points:
     - jirashell = jira.jirashell:main
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
-  build:
-    - python
+  host:
     - pip
-    - pbr >=3.0
-    - setuptools >=17.1
-    - pytest-runner
-    - sphinx >=1.6.5
+    - python >=3.6
+    - setuptools >=41.0.0
+    - setuptools-scm >=1.15.0
+    - setuptools_scm_git_archive >=1.0
+    - wheel
 
   run:
-    - python
     - defusedxml
-    - pbr >=3.0.0
-    - requests-oauthlib >=0.6.1
+    - keyring
+    - python >=3.6
     - requests >=2.10.0
+    - requests-oauthlib >=1.1.0
     - requests-toolbelt
     - setuptools >=20.10.1
-    - six >=1.10.0
 
 test:
+  requires:
+    - pip
   imports:
     - jira
+  commands:
+    - pip check
+    - jirashell --help
 
 about:
   home: https://github.com/pycontribs/jira
-  license: BSD 2-Clause
+  license: BSD-2-Clause
   license_file: LICENSE
-  summary: 'The easiest way to automate JIRA'
+  summary: Python library for interacting with JIRA via REST APIs.
   dev_url: https://github.com/pycontribs/jira
-  doc_url: https://jira.readthedocs.io/en/latest/
+  doc_url: https://jira.readthedocs.io
+  description: |-
+    This library eases the use of the Jira REST API from Python and it has been 
+    used in production for years.
 
 extra:
   recipe-maintainers:
     - ericdill
     - parente
     - pmlandwehr
+    - bollwyvl
