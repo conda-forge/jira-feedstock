@@ -31,7 +31,7 @@ requirements:
     - requests >=2.10.0
     - requests-oauthlib >=1.1.0
     - requests-toolbelt
-    - setuptools >=20.10.1
+    - typing_extensions >=3.7.4.2
 
 test:
   requires:
