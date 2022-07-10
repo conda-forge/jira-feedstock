@@ -1,4 +1,4 @@
-{% set version = "3.2.0" %}
+{% set version = "3.3.0" %}
 
 package:
   name: jira
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/j/jira/jira-{{ version }}.tar.gz
-  sha256: b7cb2ba909fde2464792948d58042096aa481493b40ab567661e08975f5e86c8
+  sha256: baa83dbf686d0d41e90f0527a1bb8a0b2dd44cc656d25ee8721933b1786b75ee
 
 build:
   noarch: python
@@ -18,7 +18,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.8
     - setuptools >=41.0.0
     - setuptools-scm >=1.15.0
     - setuptools_scm_git_archive >=1.0
@@ -27,7 +27,8 @@ requirements:
   run:
     - defusedxml
     - keyring
-    - python >=3.6
+    - packaging
+    - python >=3.8
     - requests >=2.10.0
     - requests-oauthlib >=1.1.0
     - requests-toolbelt
