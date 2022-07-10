@@ -26,6 +26,7 @@ requirements:
 
   run:
     - defusedxml
+    - keyring
     - packaging
     - python >=3.8
     - requests >=2.10.0
