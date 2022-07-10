@@ -18,7 +18,7 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python >=3.8
     - setuptools >=41.0.0
     - setuptools-scm >=1.15.0
     - setuptools_scm_git_archive >=1.0
@@ -26,8 +26,8 @@ requirements:
 
   run:
     - defusedxml
-    - keyring
-    - python >=3.6
+    - packaging
+    - python >=3.8
     - requests >=2.10.0
     - requests-oauthlib >=1.1.0
     - requests-toolbelt
