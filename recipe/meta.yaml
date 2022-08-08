@@ -1,4 +1,4 @@
-{% set version = "3.3.1" %}
+{% set version = "3.3.2" %}
 
 package:
   name: jira
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/j/jira/jira-{{ version }}.tar.gz
-  sha256: 8492d9671694a16f6cdd5fed1ba8bf767acc86b547e2e34b9705168f084c4b14
+  sha256: b1812b1778ecfbd1da1c16182d6007516e73e65823a76f316655d3bb26e91edc
 
 build:
   noarch: python
