@@ -13,21 +13,19 @@ build:
   entry_points:
     - jirashell = jira.jirashell:main
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation
 
 requirements:
   host:
     - pip
     - python >=3.8
-    - setuptools >=41.0.0
-    - setuptools-scm >=1.15.0
-    - setuptools_scm_git_archive >=1.0
-    - wheel
+    - setuptools >=60.0.0
+    - setuptools-scm >=7.0.0
 
   run:
     - defusedxml
-    - keyring
     - packaging
+    - pillow >=2.1.0
     - python >=3.8
     - requests >=2.10.0
     - requests-oauthlib >=1.1.0
