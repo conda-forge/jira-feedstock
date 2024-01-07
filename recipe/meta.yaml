@@ -1,4 +1,4 @@
-{% set version = "3.5.2" %}
+{% set version = "3.6.0" %}
 
 package:
   name: jira
@@ -6,28 +6,27 @@ package:
 
 source:
   url: https://pypi.org/packages/source/j/jira/jira-{{ version }}.tar.gz
-  sha256: d23a0e0c62c0d6926ac37c68bc0b362065ae19106fe5c79d4ba964fad80d6cf2
+  sha256: 4c67497fe8dc2f60f1c4f7b33479f059c928bec3db9dcb5cd7b6a09b6ecc0942
 
 build:
   noarch: python
   entry_points:
     - jirashell = jira.jirashell:main
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation
 
 requirements:
   host:
     - pip
     - python >=3.8
-    - setuptools >=41.0.0
-    - setuptools-scm >=1.15.0
-    - setuptools_scm_git_archive >=1.0
-    - wheel
+    - setuptools >=60.0.0
+    - setuptools-scm >=7.0.0
 
   run:
     - defusedxml
     - keyring
     - packaging
+    - pillow >=2.1.0
     - python >=3.8
     - requests >=2.10.0
     - requests-oauthlib >=1.1.0
