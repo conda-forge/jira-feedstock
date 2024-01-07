@@ -24,6 +24,7 @@ requirements:
 
   run:
     - defusedxml
+    - keyring
     - packaging
     - pillow >=2.1.0
     - python >=3.8
