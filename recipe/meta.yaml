@@ -41,6 +41,8 @@ outputs:
       run_constrained:
         # see `jira-with-cli`
         - ipython >=4.0.0
+        # see `jira-with-async`
+        - requests-futures >=0.9.7
     test:
       requires:
         - pip
@@ -68,6 +70,21 @@ outputs:
         - pip check
         - jirashell --version
         - jirashell --help
+
+  - name: jira-with-async
+    build:
+      noarch: generic
+    requirements:
+      run:
+        - {{ pin_subpackage("jira-base", exact=True) }}
+        - requests-futures
+    test:
+      requires:
+        - pip
+      imports:
+        - jira
+      commands:
+        - pip check
 
   - name: jira
     build:
