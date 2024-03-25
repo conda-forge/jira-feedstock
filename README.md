@@ -35,6 +35,8 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-jira-green.svg)](https://anaconda.org/conda-forge/jira) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jira.svg)](https://anaconda.org/conda-forge/jira) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jira.svg)](https://anaconda.org/conda-forge/jira) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jira.svg)](https://anaconda.org/conda-forge/jira) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-jira--base-green.svg)](https://anaconda.org/conda-forge/jira-base) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jira-base.svg)](https://anaconda.org/conda-forge/jira-base) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jira-base.svg)](https://anaconda.org/conda-forge/jira-base) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jira-base.svg)](https://anaconda.org/conda-forge/jira-base) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-jira--with--cli-green.svg)](https://anaconda.org/conda-forge/jira-with-cli) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jira-with-cli.svg)](https://anaconda.org/conda-forge/jira-with-cli) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jira-with-cli.svg)](https://anaconda.org/conda-forge/jira-with-cli) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jira-with-cli.svg)](https://anaconda.org/conda-forge/jira-with-cli) |
 
 Installing jira
 ===============
@@ -46,16 +48,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `jira` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `jira, jira-base, jira-with-cli` can be installed with `conda`:
 
 ```
-conda install jira
+conda install jira jira-base jira-with-cli
 ```
 
 or with `mamba`:
 
 ```
-mamba install jira
+mamba install jira jira-base jira-with-cli
 ```
 
 It is possible to list all of the versions of `jira` available on your platform with `conda`:
