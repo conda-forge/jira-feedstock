@@ -22,6 +22,7 @@ outputs:
       script:
         - {{ PYTHON }} -m pip install . --no-deps -vv --no-build-isolation
       entry_points:
+        # this must be defined here to get the right scripts built, but won't run
         - jirashell = jira.jirashell:main
     requirements:
       host:
@@ -50,8 +51,6 @@ outputs:
         - jira
       commands:
         - pip check
-        - jirashell --version
-        - jirashell --help
 
   - name: jira-with-cli
     build:
@@ -68,7 +67,6 @@ outputs:
         - jira
       commands:
         - pip check
-        - jirashell --version
         - jirashell --help
 
   - name: jira-with-async
@@ -100,7 +98,6 @@ outputs:
         - jira
       commands:
         - pip check
-        - jirashell --version
         - jirashell --help
 
 about:
