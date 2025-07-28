@@ -9,9 +9,7 @@ Package license: BSD-2-Clause
 
 Summary: Python library for interacting with JIRA via REST APIs.
 
-Development: https://github.com/pycontribs/jira
-
-Documentation: https://jira.readthedocs.io
+Documentation: https://jira.readthedocs.io/
 
 This library eases the use of the Jira REST API from Python and it has been
 used in production for years.
