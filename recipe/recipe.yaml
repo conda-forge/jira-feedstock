@@ -10,7 +10,7 @@ recipe:
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/j/jira/jira-${{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/j/jira/jira-${{ version }}.tar.gz
   sha256: 2d09ae3bf4741a2787dd889dfea5926a5d509aac3b28ab3b98c098709e6ee72d
 
 build:
