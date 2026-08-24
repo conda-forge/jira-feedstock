@@ -2,19 +2,19 @@
 schema_version: 1
 
 context:
-  version: 3.10.5
-  python_check_max: 3.13
+  version: "3.10.5"
+  python_check_max: "3.14"
 
 recipe:
   name: jira-split
   version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/j/jira/jira-${{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/j/jira/jira-${{ version }}.tar.gz
   sha256: 2d09ae3bf4741a2787dd889dfea5926a5d509aac3b28ab3b98c098709e6ee72d
 
 build:
-  number: 0
+  number: 1
   noarch: python
 
 outputs:
@@ -108,7 +108,8 @@ about:
   license: BSD-2-Clause
   license_file: LICENSE
   summary: Python library for interacting with JIRA via REST APIs.
-  homepage: https://github.com/pycontribs/jira
+  homepage: https://pypi.org/project/jira
+  repository: https://github.com/pycontribs/jira
   documentation: https://jira.readthedocs.io
   description: |-
     This library eases the use of the Jira REST API from Python and it has been
